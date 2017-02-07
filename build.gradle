@@ -1,1 +1,23 @@
 apply plugin: 'java'
+
+group = 'ch.ti8m.apprentice.lorris'
+version = '1.0.0-SNAPSHOT'
+description = 'OO Test'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+    testCompile "junit:junit:4.12"
+}
+
+test {
+    reports {
+        junitXml.enabled = false
+        html.enabled = true
+    }               
+}

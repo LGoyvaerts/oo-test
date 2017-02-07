@@ -25,7 +25,6 @@ public class Person {
 
         Person me=p1;
         System.out.println("Hello, I am "+me);
-
     }
 
     public Person() {
