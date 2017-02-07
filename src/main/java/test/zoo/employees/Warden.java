@@ -1,14 +1,13 @@
-package test.zoo.animals;
+package test.zoo.employees;
 
-import test.zoo.Animal;
 import test.zoo.Meat;
-import test.zoo.animals.abilities.Carnivore;
-import test.zoo.animals.species.Bird;
+import test.zoo.animals.species.Human;
 
 /**
  * Created by gol on 07.02.2017.
  */
-public class Pinguin extends Bird implements Carnivore {
+public class Warden extends Human {
+
 
     @Override
     public void eat(Meat meat) {
@@ -17,6 +16,8 @@ public class Pinguin extends Bird implements Carnivore {
 
     @Override
     public String saySomething() {
-        return "Akak!";
+        return "Hi, I'm here for the security!";
     }
 }
+
+

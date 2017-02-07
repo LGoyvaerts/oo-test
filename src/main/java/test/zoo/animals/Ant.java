@@ -4,6 +4,7 @@ import test.zoo.Animal;
 import test.zoo.Meat;
 import test.zoo.Plant;
 import test.zoo.animals.abilities.Omnivore;
+import test.zoo.animals.abilities.Talking;
 import test.zoo.animals.species.Insect;
 
 /**
@@ -19,4 +20,6 @@ public class Ant extends Insect implements Omnivore {
     public void eat(Plant plant) {
         System.out.println(this + " is eating a " + plant);
     }
+
+
 }

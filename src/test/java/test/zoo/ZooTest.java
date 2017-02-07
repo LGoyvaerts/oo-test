@@ -2,12 +2,11 @@ package test.zoo;
 
 import org.junit.Test;
 import test.zoo.animals.*;
-import test.zoo.animals.abilities.Carnivore;
-import test.zoo.animals.abilities.Flying;
-import test.zoo.animals.abilities.Herbivore;
-import test.zoo.animals.abilities.Omnivore;
+import test.zoo.animals.abilities.*;
 import test.zoo.animals.species.Bird;
 import test.zoo.animals.species.Insect;
+import test.zoo.employees.Receptionist;
+import test.zoo.employees.Warden;
 
 /**
  * Created by gol on 07.02.2017.
@@ -25,7 +24,10 @@ public class ZooTest {
         zoo.add(new Tiger());
         zoo.add(new Flamingo());
         zoo.add(new Pinguin());
+        zoo.add(new Fish());
         zoo.add(new Pig());
+        zoo.add(new Warden());
+        zoo.add(new Receptionist());
         for (int i = 0; i < 3; i++) {
             zoo.add(new Ant());
         }
@@ -84,5 +86,26 @@ public class ZooTest {
         pig.eat(plant);
         pig.eat(pig);
         pig.eat(bacon);
+
+
     }
+
+    @Test
+    public void talk() {
+        for (Animal a : zoo.getAnimals()) {
+
+            if (a instanceof Talking) {
+
+                // this is a cast: we can now look at something general (animal)
+                // more specifically (talking).
+                Talking talking = (Talking) a;
+
+                System.out.println(a + " says: " + talking.saySomething());
+            } else {
+                System.out.println(a + " cannot talk");
+            }
+        }
+
+    }
+
 }

@@ -13,4 +13,9 @@ public class Flamingo extends Bird implements Flying, Herbivore {
     public void eat(Plant plant) {
         System.out.println(this + " is eating a " + plant);
     }
+
+    @Override
+    public String saySomething() {
+        return "Gaaarg!";
+    }
 }

@@ -3,15 +3,15 @@ package test.zoo.animals;
 import test.zoo.Animal;
 import test.zoo.Meat;
 import test.zoo.animals.abilities.Carnivore;
-import test.zoo.animals.abilities.Talking;
 
 /**
  * Created by gol on 07.02.2017.
  */
-public class Tiger extends Animal implements Carnivore, Talking {
+public class Fish extends Animal implements Carnivore {
+
     @Override
     public int getNumberOfLegs() {
-        return 4;
+        return 0;
     }
 
     @Override
@@ -19,8 +19,7 @@ public class Tiger extends Animal implements Carnivore, Talking {
         System.out.println(this + " is eating " + meat);
     }
 
-    @Override
-    public String saySomething() {
-        return "Grrrrrr!";
-    }
+
 }
+
+

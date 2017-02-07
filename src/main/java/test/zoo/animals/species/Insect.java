@@ -5,7 +5,7 @@ import test.zoo.Animal;
 /**
  * Created by gol on 07.02.2017.
  */
-public class Insect extends Animal {
+public abstract class Insect extends Animal {
 
     @Override
     public final int getNumberOfLegs() {
